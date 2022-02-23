@@ -18,7 +18,7 @@ import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
 import AudiotrackIcon from '@mui/icons-material/Audiotrack';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
-
+import * as ROUTES from '../../constants/routes'
 import { useRouter } from 'next/router';
 
 const drawerWidth = 240;
@@ -108,9 +108,9 @@ export default function SideNavigation() {
   
   const router = useRouter();
   const menuList = [
-    {text: 'Main page', link: '/', iconElement: <HomeIcon />}, 
-    {text: 'Tracks list', link: '/tracks', iconElement: <AudiotrackIcon />}, 
-    {text: 'Albums list', link: '/albums', iconElement: <LibraryMusicIcon />}
+    {text: 'Main page', link: ROUTES.ROUTE_HOME, iconElement: <HomeIcon />}, 
+    {text: 'Tracks list', link: ROUTES.ROUTE_TRACKS, iconElement: <AudiotrackIcon />}, 
+    {text: 'Albums list', link: ROUTES.ROUTE_ALBUMS, iconElement: <LibraryMusicIcon />}
   ];
 
   return (
